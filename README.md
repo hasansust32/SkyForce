@@ -1,11 +1,27 @@
-# java-project
+# SkyForce
 
-This is our java project and we create a game basically 2D game for this project. This game shows a standard level of bucket and a ball. we protect the ball to be fall in the bucket. 
-This is  an amazing game and we create this game with java swing framework. 
+The starting framework for a 2D Java Swing game, written as an undergraduate Java project.
 
-# Challenges
+**Status: early prototype.** The code sets up the game window and main loop but does not yet contain gameplay. The planned game, a ball that the player keeps from falling into a bucket, was not implemented.
 
-We feel some challenges to for this game development as we use java swing for this game development.
+## What is implemented
 
-# The 2D ame Interphase looks like this 
-![](https://github.com/hasansust32/SkyForce/blob/master/toy.png)
+- `Display`: a `JFrame` holding an AWT `Canvas`
+- `GameSetup`: a `Runnable` game loop on its own thread with a fixed 50 ticks per second, separate `tick()` and `render()` steps, and triple buffering through `BufferStrategy`
+- `GameManager` and `Players`: placeholder classes for game state and player position
+
+![Prototype window](toy.png)
+
+## Running
+
+Open the `SkyForce/` folder in IntelliJ IDEA and run `SkyForce.Main`, or from the command line:
+
+```bash
+cd SkyForce/src
+javac SkyForce/*.java
+java SkyForce.Main
+```
+
+## Author
+
+**S M Mahamudul Hasan** · [GitHub](https://github.com/hasansust32)
